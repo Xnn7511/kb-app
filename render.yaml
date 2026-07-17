@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: polymer-kb
+    env: docker
+    region: singapore
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_API_BASE
+        value: https://api.siliconflow.cn/v1
+      - key: LLM_MODEL
+        value: Qwen/Qwen2.5-7B-Instruct
+      - key: SECRET_KEY
+        generateValue: true
+    healthCheckPath: /api/health

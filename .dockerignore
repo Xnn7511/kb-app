@@ -1,0 +1,12 @@
+__pycache__
+*.pyc
+backend/.env
+.env
+data/chroma
+data/polymer_kb.db
+data/config
+uploads
+versions
+.git
+.vscode
+.idea

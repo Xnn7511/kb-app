@@ -1,0 +1,8 @@
+{
+  "name": "polymer-kb-frontend",
+  "version": "1.0.0",
+  "description": "高分子材料原料知识库",
+  "scripts": {
+    "build": "node build.js"
+  }
+}

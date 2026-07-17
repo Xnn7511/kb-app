@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+
+# 环境变量（包含敏感信息）
+backend/.env
+.env
+
+# 数据库和向量库（运行态数据）
+data/chroma/
+data/polymer_kb.db
+data/config/
+
+# 上传文件
+uploads/raw/*
+!uploads/raw/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+
+# 版本备份
+versions/
+
+# OS
+.DS_Store
+Thumbs.db
