@@ -7,7 +7,7 @@ services:
     dockerfilePath: ./Dockerfile
     envVars:
       - key: LLM_API_KEY
-        sync: false
+        value: sk-utpzedoexpipejuddqrvoeggpulqpredpypyjtrgusvovegh
       - key: LLM_API_BASE
         value: https://api.siliconflow.cn/v1
       - key: LLM_MODEL
