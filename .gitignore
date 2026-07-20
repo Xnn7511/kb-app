@@ -3,7 +3,9 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 .eggs/
+# Python dist
 dist/
+!frontend/dist/
 
 # 环境变量（包含敏感信息）
 backend/.env
