@@ -16,10 +16,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 复制应用代码
 COPY backend/ ./backend/
 COPY frontend/dist/ ./frontend/dist/
-COPY data/ ./data/
 
-# 创建上传目录
-RUN mkdir -p uploads/raw
+# 创建数据目录（不在仓库中，运行时生成）
+RUN mkdir -p data/chroma data/config uploads/raw
 
 WORKDIR /app/backend
 
