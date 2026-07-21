@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /app
 
-# 先复制依赖文件，利用 Docker 缓存层
+# 复制依赖文件并安装
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
@@ -25,5 +25,5 @@ WORKDIR /app/backend
 
 EXPOSE 8080
 
-# 启动命令
-CMD ["python3", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
+# Render 使用 PORT 环境变量
+CMD python -m uvicorn main:app --host 0.0.0.0 --port ${PORT:-8080}
